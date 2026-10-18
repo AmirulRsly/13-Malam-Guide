@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>13 Malam Endings Guide</title>
+<meta name="description" content="How to get the good ending and the true ending of 13 Malam. True-ending spoilers are hidden until you reveal them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3efe4;--panel:#fffdf7;--ink:#1d1b16;--muted:#5e584b;--line:#d8d0bd;--accent:#8a2414;--accent-soft:#f6e3dc;--good:#2f5d3a;--good-soft:#e1eee2;--warn-bg:#fff2cf;--warn-line:#d9b95a;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e0f0c;--panel:#171914;--ink:#e6e1d2;--muted:#a49d8a;--line:#2d3027;--accent:#e0644a;--accent-soft:#2d1611;--good:#8fc29a;--good-soft:#16241a;--warn-bg:#2a2410;--warn-line:#6d5b22;
+}}
+:root[data-theme="dark"]{
+  --bg:#0e0f0c;--panel:#171914;--ink:#e6e1d2;--muted:#a49d8a;--line:#2d3027;--accent:#e0644a;--accent-soft:#2d1611;--good:#8fc29a;--good-soft:#16241a;--warn-bg:#2a2410;--warn-line:#6d5b22;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px 80px}
+header{padding:56px 0 24px;border-bottom:1px solid var(--line);margin-bottom:20px}
+h1,h2,h3,.pix{font-family:"VT323",monospace;font-weight:400;letter-spacing:.02em}
+h1{font-size:clamp(48px,10vw,80px);line-height:1;margin:0 0 6px;color:var(--accent)}
+.sub{font-size:18px;color:var(--muted);margin:0}
+h2{font-size:34px;margin:44px 0 8px;line-height:1.1}
+h2 .n{color:var(--muted);margin-right:10px}
+h3{font-size:24px;margin:22px 0 4px}
+p{margin:8px 0}
+a{color:var(--accent)}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0}
+nav a{font-family:"VT323",monospace;font-size:20px;color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:2px 10px;background:var(--panel)}
+nav a:hover{border-color:var(--accent);color:var(--accent)}
+.part{font-family:"VT323",monospace;font-size:22px;letter-spacing:.08em;margin:56px 0 0;padding:6px 12px;border-radius:4px;display:inline-block}
+.part.good{background:var(--good-soft);color:var(--good)}
+.part.true{background:var(--accent-soft);color:var(--accent)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin:14px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:14px 0}
+.grid div{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px;padding:10px 12px}
+.grid.good div{border-left-color:var(--good)}
+.grid b{display:block;font-family:"VT323",monospace;font-size:22px;font-weight:400;line-height:1.1}
+.grid span{font-size:14px;color:var(--muted)}
+ol,ul{padding-left:22px;margin:8px 0}
+li{margin:4px 0}
+kbd{font-family:"VT323",monospace;font-size:18px;border:1px solid var(--line);border-bottom-width:2px;border-radius:3px;padding:0 6px;background:var(--panel)}
+.tag{font-family:"VT323",monospace;font-size:19px;color:var(--good)}
+.tip{border-left:3px solid var(--accent);background:var(--accent-soft);padding:8px 12px;border-radius:0 6px 6px 0;margin:12px 0;font-size:15px}
+.tip.good{border-left-color:var(--good);background:var(--good-soft)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:15px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:"VT323",monospace;font-size:20px;font-weight:400;color:var(--muted)}
+.check{list-style:none;padding:0}
+.check li{padding-left:28px;position:relative}
+.check li::before{content:"";position:absolute;left:0;top:5px;width:16px;height:16px;border:2px solid var(--muted);border-radius:3px}
+/* The true ending, hidden until revealed. */
+.gate{border:2px dashed var(--accent);border-radius:10px;padding:28px 20px;text-align:center;margin:20px 0;background:var(--panel)}
+.gate p{color:var(--muted);max-width:520px;margin:8px auto 18px}
+.gate .big{font-family:"VT323",monospace;font-size:30px;color:var(--ink);margin:0}
+.reveal{font-family:"VT323",monospace;font-size:24px;background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 22px;cursor:pointer}
+.reveal:hover{filter:brightness(1.1)}
+.reveal:focus-visible,.toggle:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.hide-again{font-family:"VT323",monospace;font-size:19px;background:none;border:1px solid var(--line);color:var(--muted);border-radius:4px;padding:2px 12px;cursor:pointer;margin-top:8px}
+#truth[hidden]{display:none}
+footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.toggle{position:fixed;top:12px;right:12px;font-family:"VT323",monospace;font-size:18px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:2px 10px;cursor:pointer;z-index:2}
+@media (max-width:520px){h2{font-size:30px}th,td{padding:6px}.gate{padding:22px 14px}}
+</style>
+</head>
+<body>
+<button class="toggle" id="theme" aria-label="Switch between light and dark">light / dark</button>
+<div class="wrap">
+<header>
+  <h1>13 MALAM</h1>
+  <p class="sub">An endings guide: escaping in the car, and (hidden below) the secret true ending.</p>
+  <nav>
+    <a href="#basics">Surviving</a><a href="#car">The car</a><a href="#parts">The five parts</a><a href="#battery">The battery</a><a href="#fix">Fixing &amp; escaping</a><a href="#true">True ending</a>
+  </nav>
+</header>
+
+<section id="basics">
+  <h2><span class="n">00</span>The basics</h2>
+  <p>You came out to a lake house for a fishing holiday, from the 19th to the 31st of October. That's 13 days, and every night something comes for you. There are three endings:</p>
+  <div class="grid good">
+    <div><b>Good ending</b><span>Fix the car and drive out through the gate.</span></div>
+    <div><b>True ending</b><span>Secret. Hidden at the bottom of this page.</span></div>
+    <div><b>Bad endings</b><span>Die. Each one is named after whatever killed you.</span></div>
+  </div>
+  <h3>Staying alive</h3>
+  <ul>
+    <li><b>Fish by day.</b> Fish are your food and your money: Hamid the merchant trades only for fish. Cook them on the stove in the house.</li>
+    <li><b>Listen to the radio.</b> The weather channel tells you about rain and storms. The midnight ghost-story show (<i>Cerita Seram Tengah Malam</i>) tells you what each ghost is and how the old folk kept it away.</li>
+    <li><b>Prepare before dusk.</b> Each ghost has two tasks. Do both and your weapons hurt it properly. Do one and it takes twice as many hits. Do none and weapons don't touch it, so hide (wardrobe, outhouse, bushes, tall weeds).</li>
+    <li><b>Scavenge.</b> The forest behind the house is laid out new every morning: materials, mushrooms, car parts, and sometimes a small chest. The empty neighbour houses have storage boxes worth opening.</li>
+  </ul>
+  <table>
+    <tr><th>Ghost</th><th>Task 1</th><th>Task 2</th></tr>
+    <tr><td>Pontianak</td><td>Chop down every banana plant in the yard</td><td>Burn the white blossoms that turn up by the door</td></tr>
+    <tr><td>Toyol</td><td>Salt across both doorways, and carry no food</td><td>Find the child's toy</td></tr>
+    <tr><td>Pocong</td><td>Untie the knot at the head of the shroud on the fresh grave</td><td>Lay every shroud strip back on the grave (<kbd>G</kbd> to drop)</td></tr>
+  </table>
+</section>
+
+<div class="part good">PART ONE: THE GOOD ENDING</div>
+
+<section id="car">
+  <h2><span class="n">01</span>The car won't start</h2>
+  <p>For the first couple of days it's just a holiday, and the car is fine. On <b>day 3</b> Hamid comes by to warn you. The morning after that you decide to leave, and the car won't start. Try it twice and the journal lists what it needs.</p>
+  <p>Car parts you find before then are no use. Once the car has broken down, you're collecting <b>five parts</b>, plus the <b>toolbox</b> to fit them and the <b>car jack</b> for the tyre.</p>
+</section>
+
+<section id="parts">
+  <h2><span class="n">02</span>Where the parts are</h2>
+  <div class="grid good">
+    <div><b>Car battery</b><span>Only Hamid has one. See below.</span></div>
+    <div><b>Spark plugs</b><span>In the lake house next door.</span></div>
+    <div><b>Fan belt</b><span>Locked up in the big house.</span></div>
+    <div><b>Spare tyre</b><span>Hung from a tree as a swing on the far shore of the lake.</span></div>
+    <div><b>Fuel can</b><span>In the old boat that drifts in by the jetty.</span></div>
+    <div><b>Car jack</b><span>In the east house.</span></div>
+  </div>
+  <h3>Getting into the houses</h3>
+  <ul>
+    <li><b>Keys are named after what they open</b>: Lake house key, East house key, Back room key, Balcony room key, Forest house key, Boatman's house key.</li>
+    <li><b>Big house:</b> read the owner's notes. The <b>Balcony room key</b> is in the <b>mailbox by the road gate</b>. The <b>Back room key</b> is lying somewhere in the house's open rooms.</li>
+    <li>Look under stones, up on roofs and in what you fish up. Treasure from the lake can include a house key.</li>
+    <li>A locked door can also be smashed with a sledgehammer, if you have one.</li>
+  </ul>
+  <h3>Crossing the lake</h3>
+  <ol>
+    <li>Take the fuel can out of the boat first.</li>
+    <li>Make <b>oars</b> at the workbench: <b>2 wood planks + 2 rope</b>.</li>
+    <li><kbd>E</kbd> on the boat fits the oars, and <kbd>E</kbd> again gets in. <kbd>W</kbd>/<kbd>S</kbd> row, <kbd>A</kbd>/<kbd>D</kbd> turn, and <kbd>E</kbd> gets you out next to a bank or the jetty.</li>
+    <li>Row over to the far woods and take the tyre down from the swing.</li>
+  </ol>
+</section>
+
+<section id="battery">
+  <h2><span class="n">03</span>The battery: Hamid's trade</h2>
+  <p>When the car breaks down with Hamid there, he offers to bring a battery from his house. From then on it's at the top of his trade list. It costs two particular fish:</p>
+  <div class="grid good">
+    <div><b>A Baung over 18 in</b><span>Baung bite in the early evening, roughly 17:00 to 20:00.</span></div>
+    <div><b>A Haruan under 16 in</b><span>Haruan only bite in a storm. Check the radio's forecast.</span></div>
+  </div>
+  <div class="tip good">Fish you catch keep their length. Check it in your fish book (<kbd>K</kbd>) before you trade. Hamid doesn't come on rainy or stormy days, so hold on to that storm Haruan until a dry day.</div>
+</section>
+
+<section id="fix">
+  <h2><span class="n">04</span>Fixing the car and escaping</h2>
+  <ol>
+    <li>With the <b>toolbox</b> and a part in your bag, go to the car and fit the part. It's a skill-check minigame. Missed checks cost time and make a loud bang that ghosts can hear.</li>
+    <li>The <b>spare tyre</b> also needs the <b>car jack</b>.</li>
+    <li>Work in daylight and on a full stomach, because hunger slows the work. In the haze, car work goes slower too.</li>
+    <li>Fit the fifth part and the car starts. You crash through the gate and drive away: <b>GOOD ENDING, ESCAPE</b>.</li>
+  </ol>
+  <div class="tip good">Do it <b>before night 13</b>. On the last night all three ghosts come at once, nothing kills them, nowhere hides you, and one blow is the end.</div>
+</section>
+
+<div class="part true" id="true">PART TWO: THE TRUE ENDING</div>
+
+<div class="gate" id="gate">
+  <p class="big">Spoilers ahead</p>
+  <p>The true ending is the game's secret. This part gives away the hidden boss, the twist about a character, and how every ghost is put to rest for good. Try to find it yourself first.</p>
+  <button class="reveal" id="reveal" aria-controls="truth" aria-expanded="false">Reveal the true ending</button>
+</div>
+
+<div id="truth" hidden>
+<section>
+  <h2><span class="n">05</span>The goal</h2>
+  <p>The thing in the lake is the <b>Mambang Air</b>, the lake spirit. Someone has been feeding it fish, and people, for years. While it lives the ghosts keep coming back. Kill it.</p>
+  <p>To call it up, lay out four things on the <b>jetty</b> and be there between <b>00:00 and 01:00</b>:</p>
+  <div class="grid">
+    <div><b>A body</b><span>Hamid's, dragged out onto the jetty</span></div>
+    <div><b>Pontianak hair</b><span>left when she's put to rest</span></div>
+    <div><b>Toyol ear</b><span>left when it's put to rest</span></div>
+    <div><b>Pocong shroud</b><span>left when it's put to rest</span></div>
+  </div>
+  <div class="tip">All of this has to be done before night 13. On the last night the ghosts can't be put to rest.</div>
+</section>
+
+<section>
+  <h2><span class="n">06</span>The boatman's book (the lore)</h2>
+  <p>The ritual is written in the <b>Mambang Air book</b> in the boatman's house on the far shore. You don't need to read it, but it's how the game tells you all this.</p>
+  <ol>
+    <li>Row across (see <a href="#parts">crossing the lake</a>).</li>
+    <li>The house is locked, because a toyol stole the key. Hide in the <b>outhouse</b> behind it and read the note pinned on the wall to your right.</li>
+    <li>Once you've read the note, the next toyol you <b>put to rest</b> drops the <b>Boatman's house key</b>. On the last day the door is found broken in.</li>
+    <li>The book is on his shelf. Hold it and press <kbd>LMB</kbd> to read it.</li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="n">07</span>Putting the ghosts to rest</h2>
+  <p>Beating a ghost down with weapons only <b>drives it off</b>, and it leaves nothing. To get its remains you have to finish it <b>the old way</b>, on a night you prepared for. When it's put to rest it comes apart in smoke and its remains fall to the ground. <b>Pick them up.</b></p>
+
+  <div class="card">
+    <h3>Pontianak → hair</h3>
+    <span class="tag">Signs: frangipani smell, a baby crying (faint means close)</span>
+    <ul>
+      <li>Do both tasks: chop the banana plants, and burn the white blossoms.</li>
+      <li>Get the <b>Pontianak spike</b>. It's in the forest from day 1 (in a new spot each day until you take it), and there's one in the east house.</li>
+      <li>Hold the spike and press <kbd>LMB</kbd> to stab her in the nape of the neck <b>from behind</b>. While she's stunned after a charge, it works from any side.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Toyol → ear</h3>
+    <span class="tag">Signs: giggling, little footsteps, food going missing</span>
+    <ul>
+      <li>Salt the doorways, put all food away, and find the <b>child's toy</b>.</li>
+      <li>Leave the toy out by the door. When the toyol sits down to play with it, <b>hit it</b>. Off the toy it's too quick to hit.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Pocong → shroud</h3>
+    <span class="tag">Signs: heavy knocking, a hopping shape in white</span>
+    <ul>
+      <li>Untie the knot on the fresh grave (<kbd>E</kbd>), and drop every shroud strip back onto the grave (<kbd>G</kbd>).</li>
+      <li>The killing blow has to land on its <b>head</b>, where the knot is.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">08</span>Hamid</h2>
+  <p>The friendly merchant is the lake spirit's keeper. He broke your car, and you were going to be victim number six. His body is the one the ritual needs.</p>
+  <ul>
+    <li>He can't be attacked on <b>days 3 and 4</b>. On other days, use the shotgun, the machete or the sledgehammer.</li>
+    <li><b>Killing him curses the lake: its fish are gone for good.</b> Only the forest pond is left to fish. Do it last.</li>
+    <li>His body holds his confession note, a sledgehammer and his goods, including a <b>car battery</b> if he was carrying one.</li>
+    <li><b>Hold <kbd>E</kbd></b> on the body to drag it, and haul it out onto the jetty boards. A body left there stays put.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="n">09</span>The summoning</h2>
+  <ol>
+    <li>Get Hamid's body onto the jetty and let go of it.</li>
+    <li>Drop the hair, the ear and the shroud on the jetty boards (<kbd>G</kbd>).</li>
+    <li>Stand on the jetty, or on the shore right by it, between <b>00:00 and 01:00</b>.</li>
+  </ol>
+  <p>The water goes still and the offering slides into the lake. Bloody weeds rise in a ring around you, so <b>bring everything you need before midnight</b>.</p>
+</section>
+
+<section>
+  <h2><span class="n">10</span>The fight</h2>
+  <div class="card"><b>Bring:</b> the shotgun and as many shells as you can carry, the machete, your <b>fishing rod</b>, and medicine or food.</div>
+  <h3>Phase 1: on land</h3>
+  <p>It wades ashore, claws up close and spits blood from range, and there's no hiding. Keep moving and shoot. About <b>15 shotgun hits</b> drive it back into the lake. Machete cuts count for less.</p>
+  <h3>Phase 2: in the water</h3>
+  <p>It swims under the surface and leaps across in front of you like a dolphin, spitting from the top of the arc. <b>Only hits while it's in the air count.</b> It takes about <b>10</b>. It gets faster and spits more as it's hurt.</p>
+  <div class="tip">If you're down to fewer than 10 shells, boxes of them sometimes float up. Cast your rod at one to pull it in.</div>
+  <h3>Phase 3: the chant</h3>
+  <p>It goes out to the middle of the lake and chants under the water. <b>Cast your rod at it, hook it and reel it in</b> onto the jetty, then finish it.</p>
+  <p>The red lifts, the sun comes up, and you get the <b>TRUE ENDING: THE EXORCIST</b>.</p>
+</section>
+
+<section>
+  <h2><span class="n">11</span>Checklist</h2>
+  <ul class="check">
+    <li>Pontianak spike found</li>
+    <li>Pontianak put to rest with the spike → hair</li>
+    <li>Toyol put to rest on its toy → ear</li>
+    <li>Pocong put to rest with the last blow to its head → shroud</li>
+    <li>Shotgun, plenty of shells, rod, healing</li>
+    <li>Hamid killed (not on days 3–4) and dragged onto the jetty</li>
+    <li>Remains on the jetty, and you there between 00:00 and 01:00</li>
+    <li>All before night 13</li>
+  </ul>
+  <button class="hide-again" id="hide">Hide the true ending again</button>
+</section>
+</div>
+
+<footer>An unofficial player guide to <i>13 Malam</i>. Details may change as the game is updated.</footer>
+</div>
+<script>
+(function(){
+  var r=document.documentElement,b=document.getElementById('theme');
+  try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s);}catch(e){}
+  b.addEventListener('click',function(){var t=r.getAttribute('data-theme');var dark=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var n=dark?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}});
+  var truth=document.getElementById('truth'),gate=document.getElementById('gate'),btn=document.getElementById('reveal');
+  function show(on){truth.hidden=!on;gate.hidden=on;btn.setAttribute('aria-expanded',on);}
+  btn.addEventListener('click',function(){show(true);truth.scrollIntoView({behavior:'smooth',block:'start'});});
+  document.getElementById('hide').addEventListener('click',function(){show(false);document.getElementById('true').scrollIntoView({behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>
