@@ -63,7 +63,8 @@ th{font-family:"VT323",monospace;font-size:20px;font-weight:400;color:var(--mute
 .reveal:hover{filter:brightness(1.1)}
 .reveal:focus-visible,.toggle:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
 .hide-again{font-family:"VT323",monospace;font-size:19px;background:none;border:1px solid var(--line);color:var(--muted);border-radius:4px;padding:2px 12px;cursor:pointer;margin-top:8px}
-#truth[hidden]{display:none}
+.secret[hidden],#truth[hidden],.gate[hidden]{display:none}
+.part.tips{background:var(--warn-bg);color:var(--ink);border:1px solid var(--warn-line)}
 footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 .toggle{position:fixed;top:12px;right:12px;font-family:"VT323",monospace;font-size:18px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:2px 10px;cursor:pointer;z-index:2}
 @media (max-width:520px){h2{font-size:30px}th,td{padding:6px}.gate{padding:22px 14px}}
@@ -76,7 +77,7 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   <h1>13 MALAM</h1>
   <p class="sub">An endings guide: escaping in the car, and (hidden below) the secret true ending.</p>
   <nav>
-    <a href="#basics">Surviving</a><a href="#car">The car</a><a href="#parts">The five parts</a><a href="#battery">The battery</a><a href="#fix">Fixing &amp; escaping</a><a href="#true">True ending</a>
+    <a href="#basics">Surviving</a><a href="#car">The car</a><a href="#parts">The five parts</a><a href="#battery">The battery</a><a href="#fix">Fixing &amp; escaping</a><a href="#tips">Secret tips</a><a href="#true">True ending</a>
   </nav>
 </header>
 
@@ -158,12 +159,97 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   <div class="tip good">Do it <b>before night 13</b>. On the last night all three ghosts come at once, nothing kills them, nowhere hides you, and one blow is the end.</div>
 </section>
 
+<div class="part tips" id="tips">SECRET TIPS</div>
+
+<div class="gate" id="tips-gate">
+  <p class="big">Hidden tricks</p>
+  <p>Things the game never tells you outright: sparkling fish, tricks with the rod, a shortcut through every locked door, and how to tell when you're dreaming. They make the game a lot easier.</p>
+  <button class="reveal" data-open="tips-body" aria-controls="tips-body" aria-expanded="false">Show the secret tips</button>
+</div>
+
+<div id="tips-body" class="secret" hidden>
+<section>
+  <h2><span class="n">✦</span>Sparkling fish</h2>
+  <p>Any fish can turn up <b>sparkling</b>: there's a glint over it in the water and on it once it's caught, and a little star on its inventory slot. <b>Cook it and eat it</b> for a special effect. Most last an hour on the watch, three last six hours. Raise the watch (<kbd>Q</kbd>) to see what's active and how long is left. The same effect doesn't stack: a second fish with the same effect is refused, but not wasted. A sparkling cooked fish can be eaten even when you're full.</p>
+  <table>
+    <tr><th>Fish</th><th>Effect</th><th>Lasts</th></tr>
+    <tr><td>Baung</td><td><b>Strong arms</b>: you hit 25% harder</td><td>1 h</td></tr>
+    <tr><td>Lampam</td><td><b>Thick skin</b>: you take less damage</td><td>1 h</td></tr>
+    <tr><td>Sepat</td><td><b>Swift feet</b>: you move faster</td><td>1 h</td></tr>
+    <tr><td>Haruan</td><td><b>Double dodge</b>: two evades back to back</td><td>1 h</td></tr>
+    <tr><td>Puyu</td><td><b>Endless breath</b>: you never run out of stamina</td><td>1 h</td></tr>
+    <tr><td>Toman</td><td><b>Quick hands</b>: faster swings, shots and reloads</td><td>1 h</td></tr>
+    <tr><td>Keli</td><td><b>Treasure luck</b>: always a treasure on the line</td><td>6 h</td></tr>
+    <tr><td>Tilapia</td><td><b>Hushed</b>: ghosts hear you as little as in a thunderstorm</td><td>6 h</td></tr>
+    <tr><td>Kelah</td><td><b>Third eye</b>: see every fish in the water as it really is, with its name and size under the crosshair</td><td>6 h</td></tr>
+  </table>
+  <div class="tip good">Keep a sparkling Tilapia, Lampam or Toman cooked and ready for a hard night, or for the Mambang Air fight.</div>
+</section>
+
+<section>
+  <h2><span class="n">✦</span>The rod picks things up</h2>
+  <p>Cast your fishing rod <b>at an item lying on the ground</b> (anything you could pick up) and the hook catches it. Reel it in and it flies back to you on the line. Landing within about a metre of it is enough, as long as nothing solid is in the way.</p>
+  <ul>
+    <li>Pull down things that are out of reach, like a key lying up on a roof.</li>
+    <li>Grab things from a safe distance, or from across water.</li>
+    <li>Boxes floating on the lake (flotsam) can be cast at and reeled in too.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="n">✦</span>Get the boat early</h2>
+  <p>The boat with the <b>fuel can</b> sits out in the middle of the lake for days 1–5. From day 6 it drifts in a little each hour, and it reaches the jetty on day 9. You don't have to wait.</p>
+  <ol>
+    <li>Take the bait off your hook. It has to be a <b>bare hook</b>.</li>
+    <li>Cast onto the boat. The hook snags it.</li>
+    <li>Reel it like a heavy, stubborn fish. It creeps toward the jetty while the bar fills and drifts back as the bar empties, so keep at it.</li>
+  </ol>
+  <p>Once it's brought in it stays by the jetty. That gets you the fuel can and the way across the lake days early.</p>
+</section>
+
+<section>
+  <h2><span class="n">✦</span>Hamid's sledgehammer</h2>
+  <p>Kill Hamid (not on days 3–4) and search his body. You'll find his confession note, his goods (a <b>car battery</b> among them if he was carrying one) and a two-handed <b>sledgehammer</b>.</p>
+  <ul>
+    <li>It <b>smashes locked doors, wooden doors and louvre windows</b>, so you can skip hunting for keys and go straight into the big house and the neighbours' houses.</li>
+    <li>It hits hard as a weapon too.</li>
+    <li><b>The cost:</b> the lake is cursed and its fish are gone for good (only the forest pond is left), and you lose your only trader. Stock up on food first.</li>
+  </ul>
+  <div class="tip">Kill him too early (on his warning visit, or before his first trading day) and his pockets are empty: no note and no sledgehammer. Wait until he's been coming to trade.</div>
+</section>
+
+<section>
+  <h2><span class="n">✦</span>Dreams: "I woke up... didn't I?"</h2>
+  <p>Some mornings you only <b>dream</b> that you woke up. It happens at least three times a run, on mornings from day 5 to day 12, sometimes once more up to day 13.</p>
+  <h3>What makes them more likely</h3>
+  <ul>
+    <li><b>Wild mushrooms.</b> Each one eaten since you last slept makes a dream that night 25% likelier. Four, and it's certain.</li>
+    <li><b>Rotten food left lying around the house</b> when you go to bed. Each rotten thing makes it a little likelier.</li>
+  </ul>
+  <h3>How to tell</h3>
+  <p>In each dream <b>exactly one big thing is wrong</b>. It might be a red sky raining blood, a red lake with shadows swimming in it, one giant fish filling the lake, fish raining down, fish swimming through the sky, banana plants everywhere, waking alone on an island, waking in a misty graveyard, Hamid laughing in a storm, or snow. Each dream is harder to spot than the last:</p>
+  <table>
+    <tr><th>Dream</th><th>Tells</th></tr>
+    <tr><td>1st</td><td>The watch and the calendar show a <b>wrong date</b>, and <b>every radio channel</b> plays the dream's broadcast through static.</td></tr>
+    <tr><td>2nd</td><td>The date is still wrong, <b>one</b> channel is wrong, and there's a whisper now and then.</td></tr>
+    <tr><td>3rd and later</td><td>The date is right. Only the <b>watch glitches</b> when you look at it, and now and then one of the dream's lines slips into a normal broadcast.</td></tr>
+  </table>
+  <h3>How to wake up</h3>
+  <ul>
+    <li><b>Go back to bed and sleep.</b> You wake for real on the same morning, and nothing from the dream carries over.</li>
+    <li>Sometimes <b>the bed is gone</b>, moved somewhere else. You have two hours to find it.</li>
+    <li>Don't wait. Later in the morning something starts to feel wrong. If you're still in the dream when time runs out, <b>you never wake up</b>. The first dream gives you until about 13:00, and each later one gives you less time.</li>
+  </ul>
+</section>
+<button class="hide-again" data-close="tips-body">Hide the secret tips again</button>
+</div>
+
 <div class="part true" id="true">PART TWO: THE TRUE ENDING</div>
 
-<div class="gate" id="gate">
+<div class="gate" id="truth-gate">
   <p class="big">Spoilers ahead</p>
   <p>The true ending is the game's secret. This part gives away the hidden boss, the twist about a character, and how every ghost is put to rest for good. Try to find it yourself first.</p>
-  <button class="reveal" id="reveal" aria-controls="truth" aria-expanded="false">Reveal the true ending</button>
+  <button class="reveal" data-open="truth" aria-controls="truth" aria-expanded="false">Reveal the true ending</button>
 </div>
 
 <div id="truth" hidden>
@@ -268,7 +354,7 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
     <li>Remains on the jetty, and you there between 00:00 and 01:00</li>
     <li>All before night 13</li>
   </ul>
-  <button class="hide-again" id="hide">Hide the true ending again</button>
+  <button class="hide-again" data-close="truth">Hide the true ending again</button>
 </section>
 </div>
 
@@ -279,10 +365,9 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   var r=document.documentElement,b=document.getElementById('theme');
   try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s);}catch(e){}
   b.addEventListener('click',function(){var t=r.getAttribute('data-theme');var dark=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var n=dark?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}});
-  var truth=document.getElementById('truth'),gate=document.getElementById('gate'),btn=document.getElementById('reveal');
-  function show(on){truth.hidden=!on;gate.hidden=on;btn.setAttribute('aria-expanded',on);}
-  btn.addEventListener('click',function(){show(true);truth.scrollIntoView({behavior:'smooth',block:'start'});});
-  document.getElementById('hide').addEventListener('click',function(){show(false);document.getElementById('true').scrollIntoView({behavior:'smooth'});});
+  function show(id,on){var body=document.getElementById(id),gate=document.getElementById(id==='truth'?'truth-gate':id.replace('-body','-gate'));body.hidden=!on;gate.hidden=on;var btn=gate.querySelector('[data-open]');if(btn)btn.setAttribute('aria-expanded',on);(on?body:gate).scrollIntoView({behavior:'smooth',block:'start'});}
+  document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-open'),true);});});
+  document.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-close'),false);});});
 })();
 </script>
 </body>
