@@ -65,6 +65,8 @@ th{font-family:"VT323",monospace;font-size:20px;font-weight:400;color:var(--mute
 .hide-again{font-family:"VT323",monospace;font-size:19px;background:none;border:1px solid var(--line);color:var(--muted);border-radius:4px;padding:2px 12px;cursor:pointer;margin-top:8px}
 .secret[hidden],#truth[hidden],.gate[hidden]{display:none}
 .part.tips{background:var(--warn-bg);color:var(--ink);border:1px solid var(--warn-line)}
+.spoil{background:var(--ink);color:transparent;border-radius:3px;padding:0 4px;cursor:pointer;user-select:none;transition:background .2s,color .2s}
+.spoil.shown{background:var(--accent-soft);color:var(--ink);cursor:auto;user-select:auto}
 footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 .toggle{position:fixed;top:12px;right:12px;font-family:"VT323",monospace;font-size:18px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:2px 10px;cursor:pointer;z-index:2}
 @media (max-width:520px){h2{font-size:30px}th,td{padding:6px}.gate{padding:22px 14px}}
@@ -131,7 +133,7 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
     <tr><td><b>East house key</b></td><td>The east house</td><td>Blown up onto the <b>roof of the outhouse below the big house balcony</b>. You can't reach it by hand. Stand on the balcony and <b>cast your fishing rod</b> at it to hook it down.</td><td>The <b>car jack</b> and the <b>Pontianak spike</b></td></tr>
     <tr><td><b>Lake house key</b></td><td>The lake house next door</td><td>Comes up as <b>fishing treasure</b> from <b>day 6</b>, until you've got it. Keep fishing, and treasure comes up more often at dusk. Or skip the key: make a ladder and climb in at the window (see the secret tips).</td><td>The <b>spark plugs</b> (upstairs by the lake window)</td></tr>
     <tr><td><b>Forest house key</b></td><td>The old house that sometimes stands in the back forest</td><td>Under a <b>flat stone a few steps from that house</b>: lift the stones near it. The house appears on some days from day 6, and for certain on day 9.</td><td>A bookshelf book and loot (optional)</td></tr>
-    <tr><td><b>Boatman's house key</b></td><td>The boatman's house across the lake</td><td>A toyol took it. Read the note in the boatman's outhouse, then put a toyol to rest and it drops the key. On the last day the door is found broken in.</td><td>The Mambang Air book (optional)</td></tr>
+    <tr><td><b>Boatman's house key</b></td><td>The boatman's house across the lake</td><td>A toyol took it. Read the note in the boatman's outhouse, then put a toyol to rest and it drops the key. On the last day the door is found broken in.</td><td>A book about <span class="spoil" tabindex="0" role="button" title="Click to reveal" aria-label="Spoiler, click to reveal">the Mambang Air</span> (optional)</td></tr>
   </table>
   <div class="tip good">You don't need every key for the car. The <b>Balcony room key → East house key</b> route gets you the jack, and the <b>Lake house key</b> (or the ladder) gets you the spark plugs. The fan belt is in the big house.</div>
   <h3>Crossing the lake</h3>
@@ -382,6 +384,7 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s);}catch(e){}
   b.addEventListener('click',function(){var t=r.getAttribute('data-theme');var dark=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var n=dark?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}});
   function show(id,on){var body=document.getElementById(id),gate=document.getElementById(id==='truth'?'truth-gate':id.replace('-body','-gate'));body.hidden=!on;gate.hidden=on;var btn=gate.querySelector('[data-open]');if(btn)btn.setAttribute('aria-expanded',on);(on?body:gate).scrollIntoView({behavior:'smooth',block:'start'});}
+  document.querySelectorAll('.spoil').forEach(function(e){function on(){e.classList.add('shown');e.removeAttribute('role');e.removeAttribute('tabindex');e.removeAttribute('title');e.setAttribute('aria-label','the Mambang Air');}e.addEventListener('click',on);e.addEventListener('keydown',function(k){if(k.key==='Enter'||k.key===' '){k.preventDefault();on();}});});
   document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-open'),true);});});
   document.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-close'),false);});});
 })();
