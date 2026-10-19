@@ -96,8 +96,26 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
     <li><b>Fish by day.</b> Fish are your food and your money: Hamid the merchant trades only for fish. Cook them on the stove in the house.</li>
     <li><b>Listen to the radio.</b> The weather channel tells you about rain and storms. The midnight ghost-story show (<i>Cerita Seram Tengah Malam</i>) tells you what each ghost is and how the old folk kept it away.</li>
     <li><b>Prepare before dusk.</b> Each ghost has two tasks. Do both and your weapons hurt it properly. Do one and it takes twice as many hits. Do none and weapons don't touch it, so hide (wardrobe, outhouse, bushes, tall weeds).</li>
+    <li><b>Read every book you find.</b> Pick it up, hold it and press <kbd>LMB</kbd> to read. Each book teaches one thing that <b>nothing else in the game tells you</b>: a move, a rule or a weakness. Read it to the end and the player sums up the key point in a thought. See the table below.</li>
     <li><b>Scavenge.</b> The forest behind the house is laid out new every morning: materials, mushrooms, beetles for bait, and sometimes a small chest. The empty neighbour houses have storage boxes worth opening.</li>
   </ul>
+  <h3>The books, and what they teach</h3>
+  <table>
+    <tr><th>Book</th><th>Where</th><th>What it teaches</th></tr>
+    <tr><td><b>Wristwatch manual</b></td><td>Your house, top of the bookcase</td><td>How to read the watch (<kbd>Q</kbd>): health hearts, hunger, and the <b>red backlight</b> that means something is out there tonight.</td></tr>
+    <tr><td><b>Sorok-Sorok</b> (hide and seek)</td><td>Your house</td><td>How hiding really works: stay low, don't be seen going in, torch off.</td></tr>
+    <tr><td><b>Hutan Kemboja</b></td><td>Your house, bottom board</td><td>The back forest changes every morning. What it offers, and to be out before dark.</td></tr>
+    <tr><td><b>Kejar-Kejar</b> (playing tag)</td><td>Big house, the landing's bookshelf</td><td>The <b>dodge</b> (<kbd>Shift</kbd> + <kbd>Space</kbd>). For a moment nothing can touch you, so dodge just as it reaches you. Jump over anything charging in a straight line.</td></tr>
+    <tr><td><b>Kail Kosong</b></td><td>Lake house, upstairs bookshelf</td><td>An old fisherman's tales about what a <b>bare hook</b> can pull out of the lake.</td></tr>
+    <tr><td><b>Dreams and Waking</b></td><td>Lake house, upstairs bookshelf</td><td>How to tell when you're <b>still in a nightmare</b>, and how to get out of it.</td></tr>
+    <tr><td><b>The Exorcist Vol. 5</b></td><td>Lake house, the boarded-up gun room</td><td>The <b>pontianak</b>: how to beat her charge, and how to finish her.</td></tr>
+    <tr><td><b>The Exorcist Vol. 21</b></td><td>Big house, the study</td><td>The <b>toyol</b> (half the book is torn out).</td></tr>
+    <tr><td><b>The Exorcist Vol. 67</b></td><td>The forest house (some days)</td><td>The <b>pocong</b>: its leap, and where the killing blow has to land.</td></tr>
+    <tr><td><b>Hikayat Si Tamak</b></td><td>The forest house (some days)</td><td>An old tale of a greedy man, and what the lake takes back. <span class="spoil" tabindex="0" role="button" title="Click to reveal" aria-label="Spoiler, click to reveal">It's about killing the trader, and what that costs.</span></td></tr>
+    <tr><td><b>A swollen, waterlogged book</b></td><td>The boatman's house, across the lake</td><td><span class="spoil" tabindex="0" role="button" title="Click to reveal" aria-label="Spoiler, click to reveal">The Mambang Air, and how to call it up (the true ending).</span></td></tr>
+  </table>
+  <p>The forest house's shelf holds one of its two books at a time. Once you've found one, the other is there the next time the house appears.</p>
+  <h3>Each ghost's two tasks</h3>
   <table>
     <tr><th>Ghost</th><th>Task 1</th><th>Task 2</th></tr>
     <tr><td>Pontianak</td><td>Chop down every banana plant in the yard</td><td>Burn the white blossoms that turn up by the door</td></tr>
@@ -233,7 +251,6 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
     <li>It hits hard as a weapon too.</li>
     <li><b>The cost:</b> the lake is cursed and its fish are gone for good (only the forest pond is left), and you lose your only trader. Stock up on food first.</li>
   </ul>
-  <div class="tip">Kill him too early (on his warning visit, or before his first trading day) and his pockets are empty: no note and no sledgehammer. Wait until he's been coming to trade.</div>
 </section>
 
 <section>
@@ -384,7 +401,7 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s);}catch(e){}
   b.addEventListener('click',function(){var t=r.getAttribute('data-theme');var dark=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var n=dark?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}});
   function show(id,on){var body=document.getElementById(id),gate=document.getElementById(id==='truth'?'truth-gate':id.replace('-body','-gate'));body.hidden=!on;gate.hidden=on;var btn=gate.querySelector('[data-open]');if(btn)btn.setAttribute('aria-expanded',on);(on?body:gate).scrollIntoView({behavior:'smooth',block:'start'});}
-  document.querySelectorAll('.spoil').forEach(function(e){function on(){e.classList.add('shown');e.removeAttribute('role');e.removeAttribute('tabindex');e.removeAttribute('title');e.setAttribute('aria-label','the Mambang Air');}e.addEventListener('click',on);e.addEventListener('keydown',function(k){if(k.key==='Enter'||k.key===' '){k.preventDefault();on();}});});
+  document.querySelectorAll('.spoil').forEach(function(e){function on(){e.classList.add('shown');e.removeAttribute('role');e.removeAttribute('tabindex');e.removeAttribute('title');e.removeAttribute('aria-label');}e.addEventListener('click',on);e.addEventListener('keydown',function(k){if(k.key==='Enter'||k.key===' '){k.preventDefault();on();}});});
   document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-open'),true);});});
   document.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-close'),false);});});
 })();
