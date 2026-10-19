@@ -67,6 +67,14 @@ th{font-family:"VT323",monospace;font-size:20px;font-weight:400;color:var(--mute
 .part.tips{background:var(--warn-bg);color:var(--ink);border:1px solid var(--warn-line)}
 .spoil{background:var(--ink);color:transparent;border-radius:3px;padding:0 4px;cursor:pointer;user-select:none;transition:background .2s,color .2s}
 .spoil.shown{background:var(--accent-soft);color:var(--ink);cursor:auto;user-select:auto}
+.ico{width:22px;height:22px;vertical-align:-5px;margin-right:4px;image-rendering:pixelated;object-fit:contain}
+.ico.big{display:block;width:48px;height:48px;margin:0 0 6px}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:14px 0}
+.shots figure{margin:0}
+.shots img{cursor:zoom-in;width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:6px;border:1px solid var(--line);background:#000}
+.shots figcaption{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.35}
+.ico{background:#262c22;border-radius:4px;padding:1px}
+.ico.big{padding:4px;border-radius:6px;width:52px;height:52px}
 footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 .toggle{position:fixed;top:12px;right:12px;font-family:"VT323",monospace;font-size:18px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:2px 10px;cursor:pointer;z-index:2}
 @media (max-width:520px){h2{font-size:30px}th,td{padding:6px}.gate{padding:22px 14px}}
@@ -102,17 +110,17 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   <h3>The books, and what they teach</h3>
   <table>
     <tr><th>Book</th><th>Where</th><th>What it teaches</th></tr>
-    <tr><td><b>Wristwatch manual</b></td><td>Your house, top of the bookcase</td><td>How to read the watch (<kbd>Q</kbd>): health hearts, hunger, and the <b>red backlight</b> that means something is out there tonight.</td></tr>
-    <tr><td><b>Sorok-Sorok</b> (hide and seek)</td><td>Your house</td><td>How hiding really works: stay low, don't be seen going in, torch off.</td></tr>
-    <tr><td><b>Hutan Kemboja</b></td><td>Your house, bottom board</td><td>The back forest changes every morning. What it offers, and to be out before dark.</td></tr>
-    <tr><td><b>Kejar-Kejar</b> (playing tag)</td><td>Big house, the landing's bookshelf</td><td>The <b>dodge</b> (<kbd>Shift</kbd> + <kbd>Space</kbd>). For a moment nothing can touch you, so dodge just as it reaches you. Jump over anything charging in a straight line.</td></tr>
-    <tr><td><b>Kail Kosong</b></td><td>Lake house, upstairs bookshelf</td><td>An old fisherman's tales about what a <b>bare hook</b> can pull out of the lake.</td></tr>
-    <tr><td><b>Dreams and Waking</b></td><td>Lake house, upstairs bookshelf</td><td>How to tell when you're <b>still in a nightmare</b>, and how to get out of it.</td></tr>
-    <tr><td><b>The Exorcist Vol. 5</b></td><td>Lake house, the boarded-up gun room</td><td>The <b>pontianak</b>: how to beat her charge, and how to finish her.</td></tr>
-    <tr><td><b>The Exorcist Vol. 21</b></td><td>Big house, the study</td><td>The <b>toyol</b> (half the book is torn out).</td></tr>
-    <tr><td><b>The Exorcist Vol. 67</b></td><td>The forest house (some days)</td><td>The <b>pocong</b>: its leap, and where the killing blow has to land.</td></tr>
-    <tr><td><b>Hikayat Si Tamak</b></td><td>The forest house (some days)</td><td>An old tale of a greedy man, and what the lake takes back. <span class="spoil" tabindex="0" role="button" title="Click to reveal" aria-label="Spoiler, click to reveal">It's about killing the trader, and what that costs.</span></td></tr>
-    <tr><td><b>A swollen, waterlogged book</b></td><td>The boatman's house, across the lake</td><td><span class="spoil" tabindex="0" role="button" title="Click to reveal" aria-label="Spoiler, click to reveal">The Mambang Air, and how to call it up (the true ending).</span></td></tr>
+    <tr><td><img class="ico" src="img/items/watchguide.png" alt="" loading="lazy"><b>Wristwatch manual</b></td><td>Your house, top of the bookcase</td><td>How to read the watch (<kbd>Q</kbd>): health hearts, hunger, and the <b>red backlight</b> that means something is out there tonight.</td></tr>
+    <tr><td><img class="ico" src="img/items/soroksorok.png" alt="" loading="lazy"><b>Sorok-Sorok</b> (hide and seek)</td><td>Your house</td><td>How hiding really works: stay low, don't be seen going in, torch off.</td></tr>
+    <tr><td><img class="ico" src="img/items/hutankemboja.png" alt="" loading="lazy"><b>Hutan Kemboja</b></td><td>Your house, bottom board</td><td>The back forest changes every morning. What it offers, and to be out before dark.</td></tr>
+    <tr><td><img class="ico" src="img/items/kejarkejar.png" alt="" loading="lazy"><b>Kejar-Kejar</b> (playing tag)</td><td>Big house, the landing's bookshelf</td><td>The <b>dodge</b> (<kbd>Shift</kbd> + <kbd>Space</kbd>). For a moment nothing can touch you, so dodge just as it reaches you. Jump over anything charging in a straight line.</td></tr>
+    <tr><td><img class="ico" src="img/items/kailkosong.png" alt="" loading="lazy"><b>Kail Kosong</b></td><td>Lake house, upstairs bookshelf</td><td>An old fisherman's tales about what a <img class="ico" src="img/items/barehook.png" alt="" loading="lazy"><b>bare hook</b> can pull out of the lake.</td></tr>
+    <tr><td><img class="ico" src="img/items/dreamsandwaking.png" alt="" loading="lazy"><b>Dreams and Waking</b></td><td>Lake house, upstairs bookshelf</td><td>How to tell when you're <b>still in a nightmare</b>, and how to get out of it.</td></tr>
+    <tr><td><img class="ico" src="img/items/theexorcistvol5.png" alt="" loading="lazy"> <b>The Exorcist Vol. 5</b></td><td>Lake house, the boarded-up gun room</td><td>The <b>pontianak</b>: how to beat her charge, and how to finish her.</td></tr>
+    <tr><td><img class="ico" src="img/items/theexorcistvol21.png" alt="" loading="lazy"> <b>The Exorcist Vol. 21</b></td><td>Big house, the study</td><td>The <b>toyol</b> (half the book is torn out).</td></tr>
+    <tr><td><img class="ico" src="img/items/theexorcistvol67.png" alt="" loading="lazy"> <b>The Exorcist Vol. 67</b></td><td>The forest house (some days)</td><td>The <b>pocong</b>: its leap, and where the killing blow has to land.</td></tr>
+    <tr><td><img class="ico" src="img/items/hikayatsitamak.png" alt="" loading="lazy"><b>Hikayat Si Tamak</b></td><td>The forest house (some days)</td><td>An old tale of a greedy man, and what the lake takes back. <span class="spoil" tabindex="0" role="button" title="Click to reveal" aria-label="Spoiler, click to reveal">It's about killing the trader, and what that costs.</span></td></tr>
+    <tr><td><img class="ico" src="img/items/mambangairbook.png" alt="" loading="lazy"> <b>A swollen, waterlogged book</b></td><td>The boatman's house, across the lake</td><td><span class="spoil" tabindex="0" role="button" title="Click to reveal" aria-label="Spoiler, click to reveal">The Mambang Air, and how to call it up (the true ending).</span></td></tr>
   </table>
   <p>The forest house's shelf holds one of its two books at a time. Once you've found one, the other is there the next time the house appears.</p>
   <h3>Each ghost's two tasks</h3>
@@ -122,6 +130,11 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
     <tr><td>Toyol</td><td>Salt across both doorways, and carry no food</td><td>Find the child's toy</td></tr>
     <tr><td>Pocong</td><td>Untie the knot at the head of the shroud on the fresh grave</td><td>Lay every shroud strip back on the grave (<kbd>G</kbd> to drop)</td></tr>
   </table>
+  <h3>What they look like</h3>
+  <p>Each one comes at night. Here they are by torchlight, and the signs each one leaves by day.</p>
+  <div class="shots"><figure><img src="img/shots/pontianak.jpg" alt="The pontianak, at night" loading="lazy"><figcaption>The pontianak, at night</figcaption></figure><figure><img src="img/shots/toyol.jpg" alt="The toyol, at night" loading="lazy"><figcaption>The toyol, at night</figcaption></figure><figure><img src="img/shots/pocong.jpg" alt="The pocong, at night" loading="lazy"><figcaption>The pocong, at night</figcaption></figure></div>
+  <div class="shots"><figure><img src="img/shots/blossoms.jpg" alt="White blossoms by the door: a pontianak night" loading="lazy"><figcaption>White blossoms by the door: a pontianak night</figcaption></figure><figure><img src="img/shots/toy.jpg" alt="A child's toy in the yard: a toyol night" loading="lazy"><figcaption>A child's toy in the yard: a toyol night</figcaption></figure><figure><img src="img/shots/grave.jpg" alt="The fresh grave: a pocong night" loading="lazy"><figcaption>The fresh grave: a pocong night</figcaption></figure></div>
+
 </section>
 
 <div class="part good">PART ONE: THE GOOD ENDING</div>
@@ -129,35 +142,40 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
 <section id="car">
   <h2><span class="n">01</span>The car won't start</h2>
   <p>For the first couple of days it's just a holiday, and the car is fine. On <b>day 3</b> Hamid comes by to warn you. The morning after that you decide to leave, and the car won't start. Try it twice and the journal lists what it needs.</p>
-  <p>Car parts you find before then are no use. Once the car has broken down, you're collecting <b>five parts</b>, plus the <b>toolbox</b> to fit them and the <b>car jack</b> for the tyre.</p>
+  <p>Car parts you find before then are no use. Once the car has broken down, you're collecting <b>five parts</b>, plus the <img class="ico" src="img/items/toolbox.png" alt="" loading="lazy"><b>toolbox</b> to fit them and the <img class="ico" src="img/items/carjack.png" alt="" loading="lazy"><b>car jack</b> for the tyre.</p>
 </section>
 
 <section id="parts">
   <h2><span class="n">02</span>Where the parts are</h2>
   <div class="grid good">
-    <div><b>Car battery</b><span>Only Hamid has one. See below.</span></div>
-    <div><b>Spark plugs</b><span>In the lake house next door.</span></div>
-    <div><b>Fan belt</b><span>Locked up in the big house.</span></div>
-    <div><b>Spare tyre</b><span>Hung from a tree as a swing on the far shore of the lake.</span></div>
-    <div><b>Fuel can</b><span>In the old boat that drifts in by the jetty.</span></div>
-    <div><b>Car jack</b><span>In the east house.</span></div>
+    <div><img class="ico big" src="img/items/carbattery.png" alt="" loading="lazy"><b>Car battery</b><span>Only Hamid has one. See below.</span></div>
+    <div><img class="ico big" src="img/items/sparkplugs.png" alt="" loading="lazy"><b>Spark plugs</b><span>In the lake house next door.</span></div>
+    <div><img class="ico big" src="img/items/fanbelt.png" alt="" loading="lazy"><b>Fan belt</b><span>Locked up in the big house.</span></div>
+    <div><img class="ico big" src="img/items/sparetyre.png" alt="" loading="lazy"><b>Spare tyre</b><span>Hung from a tree as a swing on the far shore of the lake.</span></div>
+    <div><img class="ico big" src="img/items/fuelcan.png" alt="" loading="lazy"><b>Fuel can</b><span>In the old boat that drifts in by the jetty.</span></div>
+    <div><img class="ico big" src="img/items/carjack.png" alt="" loading="lazy"><b>Car jack</b><span>In the east house.</span></div>
   </div>
+  <div class="shots"><figure><img src="img/shots/lake-house.jpg" alt="The lake house (spark plugs)" loading="lazy"><figcaption>The lake house (spark plugs)</figcaption></figure><figure><img src="img/shots/east-house.jpg" alt="The east house (car jack, spike)" loading="lazy"><figcaption>The east house (car jack, spike)</figcaption></figure><figure><img src="img/shots/big-house.jpg" alt="The big house (fan belt)" loading="lazy"><figcaption>The big house (fan belt)</figcaption></figure></div>
+  <div class="shots"><figure><img src="img/shots/boat.jpg" alt="The boat out on the lake, the fuel can aboard" loading="lazy"><figcaption>The boat out on the lake, the fuel can aboard</figcaption></figure><figure><img src="img/shots/tyre-swing.jpg" alt="The tyre swing on the far shore" loading="lazy"><figcaption>The tyre swing on the far shore</figcaption></figure><figure><img src="img/shots/jetty.jpg" alt="The jetty, where the boat comes in" loading="lazy"><figcaption>The jetty, where the boat comes in</figcaption></figure></div>
+
   <h3>Getting the keys</h3>
   <p>Every key is named after the door it opens. Here's where each one is, in the order you'll usually want them:</p>
   <table>
     <tr><th>Key</th><th>Opens</th><th>Where to find it</th><th>What's inside for you</th></tr>
-    <tr><td><b>Balcony room key</b></td><td>The big house's locked room upstairs, out onto the balcony</td><td>In the <b>mailbox by the road gate</b>. The owner's note by the bed in the big house tells you so. Open the mailbox with <kbd>E</kbd>.</td><td>The balcony: from there you can see the East house key (below)</td></tr>
-    <tr><td><b>Back room key</b></td><td>The big house's locked room downstairs</td><td>Lying somewhere in the <b>big house's open rooms</b> (a different spot each run). Never inside a box.</td><td>Big house loot</td></tr>
-    <tr><td><b>East house key</b></td><td>The east house</td><td>Blown up onto the <b>roof of the outhouse below the big house balcony</b>. You can't reach it by hand. Stand on the balcony and <b>cast your fishing rod</b> at it to hook it down.</td><td>The <b>car jack</b> and the <b>Pontianak spike</b></td></tr>
-    <tr><td><b>Lake house key</b></td><td>The lake house next door</td><td>Comes up as <b>fishing treasure</b> from <b>day 6</b>, until you've got it. Keep fishing, and treasure comes up more often at dusk. Or skip the key: make a ladder and climb in at the window (see the secret tips).</td><td>The <b>spark plugs</b> (upstairs by the lake window)</td></tr>
-    <tr><td><b>Forest house key</b></td><td>The old house that sometimes stands in the back forest</td><td>Under a <b>flat stone a few steps from that house</b>: lift the stones near it. The house appears on some days from day 6, and for certain on day 9.</td><td>A bookshelf book and loot (optional)</td></tr>
-    <tr><td><b>Boatman's house key</b></td><td>The boatman's house across the lake</td><td>A toyol took it. Read the note in the boatman's outhouse, then put a toyol to rest and it drops the key. On the last day the door is found broken in.</td><td>A book about <span class="spoil" tabindex="0" role="button" title="Click to reveal" aria-label="Spoiler, click to reveal">the Mambang Air</span> (optional)</td></tr>
+    <tr><td><img class="ico" src="img/items/balconyroomkey.png" alt="" loading="lazy"><b>Balcony room key</b></td><td>The big house's locked room upstairs, out onto the balcony</td><td>In the <b>mailbox by the road gate</b>. The owner's note by the bed in the big house tells you so. Open the mailbox with <kbd>E</kbd>.</td><td>The balcony: from there you can see the East house key (below)</td></tr>
+    <tr><td><img class="ico" src="img/items/backroomkey.png" alt="" loading="lazy"><b>Back room key</b></td><td>The big house's locked room downstairs</td><td>Lying somewhere in the <b>big house's open rooms</b> (a different spot each run). Never inside a box.</td><td>Big house loot</td></tr>
+    <tr><td><img class="ico" src="img/items/easthousekey.png" alt="" loading="lazy"><b>East house key</b></td><td>The east house</td><td>Blown up onto the <b>roof of the outhouse below the big house balcony</b>. You can't reach it by hand. Stand on the balcony and <b>cast your fishing rod</b> at it to hook it down.</td><td>The <img class="ico" src="img/items/carjack.png" alt="" loading="lazy"><b>car jack</b> and the <img class="ico" src="img/items/pontianakspike.png" alt="" loading="lazy"><b>Pontianak spike</b></td></tr>
+    <tr><td><img class="ico" src="img/items/lakehousekey.png" alt="" loading="lazy"><b>Lake house key</b></td><td>The lake house next door</td><td>Comes up as <b>fishing treasure</b> from <b>day 6</b>, until you've got it. Keep fishing, and treasure comes up more often at dusk. Or skip the key: make a ladder and climb in at the window (see the secret tips).</td><td>The <img class="ico" src="img/items/sparkplugs.png" alt="" loading="lazy"><b>spark plugs</b> (upstairs by the lake window)</td></tr>
+    <tr><td><img class="ico" src="img/items/foresthousekey.png" alt="" loading="lazy"><b>Forest house key</b></td><td>The old house that sometimes stands in the back forest</td><td>Under a <b>flat stone a few steps from that house</b>: lift the stones near it. The house appears on some days from day 6, and for certain on day 9.</td><td>A bookshelf book and loot (optional)</td></tr>
+    <tr><td><img class="ico" src="img/items/boatmanshousekey.png" alt="" loading="lazy"><b>Boatman's house key</b></td><td>The boatman's house across the lake</td><td>A toyol took it. Read the note in the boatman's outhouse, then put a toyol to rest and it drops the key. On the last day the door is found broken in.</td><td>A book about <span class="spoil" tabindex="0" role="button" title="Click to reveal" aria-label="Spoiler, click to reveal">the Mambang Air</span> (optional)</td></tr>
   </table>
   <div class="tip good">You don't need every key for the car. The <b>Balcony room key → East house key</b> route gets you the jack, and the <b>Lake house key</b> (or the ladder) gets you the spark plugs. The fan belt is in the big house.</div>
+  <div class="shots"><figure><img src="img/shots/mailbox.jpg" alt="The mailbox by the road gate (Balcony room key)" loading="lazy"><figcaption>The mailbox by the road gate (Balcony room key)</figcaption></figure><figure><img src="img/shots/roof-key.jpg" alt="From the balcony: the East house key on the outhouse roof" loading="lazy"><figcaption>From the balcony: the East house key on the outhouse roof</figcaption></figure></div>
+
   <h3>Crossing the lake</h3>
   <ol>
     <li>Take the fuel can out of the boat first.</li>
-    <li>Make <b>oars</b> at the workbench: <b>2 wood planks + 2 rope</b>.</li>
+    <li>Make <img class="ico" src="img/items/oars.png" alt="" loading="lazy"><b>oars</b> at the workbench: <b>2 wood planks + 2 rope</b>.</li>
     <li><kbd>E</kbd> on the boat fits the oars, and <kbd>E</kbd> again gets in. <kbd>W</kbd>/<kbd>S</kbd> row, <kbd>A</kbd>/<kbd>D</kbd> turn, and <kbd>E</kbd> gets you out next to a bank or the jetty.</li>
     <li>Row over to the far woods and take the tyre down from the swing.</li>
   </ol>
@@ -167,17 +185,18 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   <h2><span class="n">03</span>The battery: Hamid's trade</h2>
   <p>When the car breaks down with Hamid there, he offers to bring a battery from his house. From then on it's at the top of his trade list. It costs two fish, any size:</p>
   <div class="grid good">
-    <div><b>A Baung</b><span>Baung bite in the early evening, roughly 17:00 to 20:00.</span></div>
-    <div><b>A Haruan</b><span>Haruan only bite in a storm. Check the radio's forecast.</span></div>
+    <div><img class="ico big" src="img/items/baung.png" alt="" loading="lazy"><b>A Baung</b><span>Baung bite in the early evening, roughly 17:00 to 20:00.</span></div>
+    <div><img class="ico big" src="img/items/haruan.png" alt="" loading="lazy"><b>A Haruan</b><span>Haruan only bite in a storm. Check the radio's forecast.</span></div>
   </div>
   <div class="tip good">Keep them in the fridge so they don't go off. Hamid doesn't come on rainy or stormy days, so hold on to that storm Haruan until a dry day.</div>
+  <div class="shots"><figure><img src="img/shots/hamid.jpg" alt="Hamid comes up the road to trade, noon till six" loading="lazy"><figcaption>Hamid comes up the road to trade, noon till six</figcaption></figure></div>
 </section>
 
 <section id="fix">
   <h2><span class="n">04</span>Fixing the car and escaping</h2>
   <ol>
-    <li>With the <b>toolbox</b> and a part in your bag, go to the car and fit the part. It's a skill-check minigame. Missed checks cost time and make a loud bang that ghosts can hear.</li>
-    <li>The <b>spare tyre</b> also needs the <b>car jack</b>.</li>
+    <li>With the <img class="ico" src="img/items/toolbox.png" alt="" loading="lazy"><b>toolbox</b> and a part in your bag, go to the car and fit the part. It's a skill-check minigame. Missed checks cost time and make a loud bang that ghosts can hear.</li>
+    <li>The <img class="ico" src="img/items/sparetyre.png" alt="" loading="lazy"><b>spare tyre</b> also needs the <img class="ico" src="img/items/carjack.png" alt="" loading="lazy"><b>car jack</b>.</li>
     <li>Work in daylight and on a full stomach, because hunger slows the work. In the haze, car work goes slower too.</li>
     <li>Fit the fifth part and the car starts. You crash through the gate and drive away: <b>GOOD ENDING, ESCAPE</b>.</li>
   </ol>
@@ -198,15 +217,15 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   <p>Any fish can turn up <b>sparkling</b>: there's a glint over it in the water and on it once it's caught, and a little star on its inventory slot. <b>Cook it and eat it</b> for a special effect. Most last an hour on the watch, three last six hours. Raise the watch (<kbd>Q</kbd>) to see what's active and how long is left. The same effect doesn't stack: a second fish with the same effect is refused, but not wasted. A sparkling cooked fish can be eaten even when you're full.</p>
   <table>
     <tr><th>Fish</th><th>Effect</th><th>Lasts</th></tr>
-    <tr><td>Baung</td><td><b>Strong arms</b>: you hit 25% harder</td><td>1 h</td></tr>
-    <tr><td>Lampam</td><td><b>Thick skin</b>: you take less damage</td><td>1 h</td></tr>
-    <tr><td>Sepat</td><td><b>Swift feet</b>: you move faster</td><td>1 h</td></tr>
-    <tr><td>Haruan</td><td><b>Double dodge</b>: two evades back to back</td><td>1 h</td></tr>
-    <tr><td>Puyu</td><td><b>Endless breath</b>: you never run out of stamina</td><td>1 h</td></tr>
-    <tr><td>Toman</td><td><b>Quick hands</b>: faster swings, shots and reloads</td><td>1 h</td></tr>
-    <tr><td>Keli</td><td><b>Treasure luck</b>: always a treasure on the line</td><td>6 h</td></tr>
-    <tr><td>Tilapia</td><td><b>Hushed</b>: ghosts hear you as little as in a thunderstorm</td><td>6 h</td></tr>
-    <tr><td>Kelah</td><td><b>Third eye</b>: see every fish in the water as it really is, with its name and size under the crosshair</td><td>6 h</td></tr>
+    <tr><td><img class="ico" src="img/items/baung.png" alt="" loading="lazy"> Baung</td><td><b>Strong arms</b>: you hit 25% harder</td><td>1 h</td></tr>
+    <tr><td><img class="ico" src="img/items/lampam.png" alt="" loading="lazy"> Lampam</td><td><b>Thick skin</b>: you take less damage</td><td>1 h</td></tr>
+    <tr><td><img class="ico" src="img/items/sepat.png" alt="" loading="lazy"> Sepat</td><td><b>Swift feet</b>: you move faster</td><td>1 h</td></tr>
+    <tr><td><img class="ico" src="img/items/haruan.png" alt="" loading="lazy"> Haruan</td><td><b>Double dodge</b>: two evades back to back</td><td>1 h</td></tr>
+    <tr><td><img class="ico" src="img/items/puyu.png" alt="" loading="lazy"> Puyu</td><td><b>Endless breath</b>: you never run out of stamina</td><td>1 h</td></tr>
+    <tr><td><img class="ico" src="img/items/toman.png" alt="" loading="lazy"> Toman</td><td><b>Quick hands</b>: faster swings, shots and reloads</td><td>1 h</td></tr>
+    <tr><td><img class="ico" src="img/items/keli.png" alt="" loading="lazy"> Keli</td><td><b>Treasure luck</b>: always a treasure on the line</td><td>6 h</td></tr>
+    <tr><td><img class="ico" src="img/items/tilapia.png" alt="" loading="lazy"> Tilapia</td><td><b>Hushed</b>: ghosts hear you as little as in a thunderstorm</td><td>6 h</td></tr>
+    <tr><td><img class="ico" src="img/items/kelah.png" alt="" loading="lazy"> Kelah</td><td><b>Third eye</b>: see every fish in the water as it really is, with its name and size under the crosshair</td><td>6 h</td></tr>
   </table>
   <div class="tip good">Keep a sparkling Tilapia, Lampam or Toman cooked and ready for a hard night, or for the Mambang Air fight.</div>
 </section>
@@ -225,18 +244,18 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   <h2><span class="n">✦</span>A ladder into the lake house</h2>
   <p>You don't have to wait for the Lake house key to come up on your line. The lake house has a <b>high window</b>.</p>
   <ol>
-    <li>Make a <b>ladder</b> at the workbench: <b>3 wood planks + 2 rusty nails</b> (takes an hour).</li>
+    <li>Make a <img class="ico" src="img/items/ladder.png" alt="" loading="lazy"><b>ladder</b> at the workbench: <b>3 wood planks + 2 rusty nails</b> (takes an hour).</li>
     <li>Carry it to the lake house and use it on the <b>high window</b> to stand it up.</li>
     <li>Climb up, then hold <kbd>C</kbd> + <kbd>W</kbd> to crouch through the window (<kbd>S</kbd> climbs back down). Once you're inside you can open the door from the inside.</li>
   </ol>
-  <p>That gets you the <b>spark plugs</b> days early. The game won't let you make the ladder once every high window's house is already open.</p>
+  <p>That gets you the <img class="ico" src="img/items/sparkplugs.png" alt="" loading="lazy"><b>spark plugs</b> days early. The game won't let you make the ladder once every high window's house is already open.</p>
 </section>
 
 <section>
   <h2><span class="n">✦</span>Get the boat early</h2>
-  <p>The boat with the <b>fuel can</b> sits out in the middle of the lake for days 1–5. From day 6 it drifts in a little each hour, and it reaches the jetty on day 9. You don't have to wait.</p>
+  <p>The boat with the <img class="ico" src="img/items/fuelcan.png" alt="" loading="lazy"><b>fuel can</b> sits out in the middle of the lake for days 1–5. From day 6 it drifts in a little each hour, and it reaches the jetty on day 9. You don't have to wait.</p>
   <ol>
-    <li>Take the bait off your hook. It has to be a <b>bare hook</b>.</li>
+    <li>Take the bait off your hook. It has to be a <img class="ico" src="img/items/barehook.png" alt="" loading="lazy"><b>bare hook</b>.</li>
     <li>Cast onto the boat. The hook snags it.</li>
     <li>Reel it like a heavy, stubborn fish. It creeps toward the jetty while the bar fills and drifts back as the bar empties, so keep at it.</li>
   </ol>
@@ -245,7 +264,7 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
 
 <section>
   <h2><span class="n">✦</span>Hamid's sledgehammer</h2>
-  <p>Kill Hamid (not on days 3–4) and search his body. You'll find his confession note, his goods (a <b>car battery</b> among them if he was carrying one) and a two-handed <b>sledgehammer</b>.</p>
+  <p>Kill Hamid (not on days 3–4) and search his body. You'll find his confession note, his goods (a <img class="ico" src="img/items/carbattery.png" alt="" loading="lazy"><b>car battery</b> among them if he was carrying one) and a two-handed <img class="ico" src="img/items/sledgehammer.png" alt="" loading="lazy"><b>sledgehammer</b>.</p>
   <ul>
     <li>It <b>smashes locked doors, wooden doors and louvre windows</b>, so you can skip hunting for keys and go straight into the big house and the neighbours' houses.</li>
     <li>It hits hard as a weapon too.</li>
@@ -294,20 +313,20 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   <p>To call it up, lay out four things on the <b>jetty</b> and be there between <b>00:00 and 01:00</b>:</p>
   <div class="grid">
     <div><b>A body</b><span>Hamid's, dragged out onto the jetty</span></div>
-    <div><b>Pontianak hair</b><span>left when she's put to rest</span></div>
-    <div><b>Toyol ear</b><span>left when it's put to rest</span></div>
-    <div><b>Pocong shroud</b><span>left when it's put to rest</span></div>
+    <div><img class="ico big" src="img/items/pontianakhair.png" alt="" loading="lazy"><b>Pontianak hair</b><span>left when she's put to rest</span></div>
+    <div><img class="ico big" src="img/items/toyolear.png" alt="" loading="lazy"><b>Toyol ear</b><span>left when it's put to rest</span></div>
+    <div><img class="ico big" src="img/items/pocongshroud.png" alt="" loading="lazy"><b>Pocong shroud</b><span>left when it's put to rest</span></div>
   </div>
   <div class="tip">All of this has to be done before night 13. On the last night the ghosts can't be put to rest.</div>
 </section>
 
 <section>
   <h2><span class="n">06</span>The boatman's book (the lore)</h2>
-  <p>The ritual is written in the <b>Mambang Air book</b> in the boatman's house on the far shore. You don't need to read it, but it's how the game tells you all this.</p>
+  <p>The ritual is written in the <img class="ico" src="img/items/mambangairbook.png" alt="" loading="lazy"><b>Mambang Air book</b> in the boatman's house on the far shore. You don't need to read it, but it's how the game tells you all this.</p>
   <ol>
     <li>Row across (see <a href="#parts">crossing the lake</a>).</li>
     <li>The house is locked, because a toyol stole the key. Hide in the <b>outhouse</b> behind it and read the note pinned on the wall to your right.</li>
-    <li>Once you've read the note, the next haunted night is always a toyol. Put it to rest and it drops the <b>Boatman's house key</b>. On the last day the door is found broken in.</li>
+    <li>Once you've read the note, the next haunted night is always a toyol. Put it to rest and it drops the <img class="ico" src="img/items/boatmanshousekey.png" alt="" loading="lazy"><b>Boatman's house key</b>. On the last day the door is found broken in.</li>
     <li>The book is on his shelf. Hold it and press <kbd>LMB</kbd> to read it.</li>
   </ol>
 </section>
@@ -317,25 +336,26 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   <p>Beating a ghost down with weapons only <b>drives it off</b>, and it leaves nothing. To get its remains you have to finish it <b>the old way</b>, on a night you prepared for. When it's put to rest it comes apart in smoke and its remains fall to the ground. <b>Pick them up.</b></p>
 
   <div class="card">
-    <h3>Pontianak → hair</h3>
+    <h3>Pontianak → <img class="ico" src="img/items/pontianakhair.png" alt="" loading="lazy"> hair</h3>
     <span class="tag">Signs: frangipani smell, a baby crying (faint means close)</span>
     <ul>
       <li>Do both tasks: chop the banana plants, and burn the white blossoms.</li>
-      <li>Get the <b>Pontianak spike</b>. It's in the forest from day 1 (in a new spot each day until you take it), and there's one in the east house.</li>
+      <li>Get the <img class="ico" src="img/items/pontianakspike.png" alt="" loading="lazy"><b>Pontianak spike</b>. It's in the forest from day 1 (in a new spot each day until you take it), and there's one in the east house.</li>
       <li>Hold the spike and press <kbd>LMB</kbd> to stab her in the nape of the neck <b>from behind</b>. While she's stunned after a charge, it works from any side.</li>
       <li>Now and then she drops and charges at you on all fours. Just as she reaches you, <b>jump over her</b> (<kbd>Space</kbd>) or <b>dodge</b> (<kbd>Shift</kbd> + <kbd>Space</kbd>). She shoots past and lies stunned for a moment: that's your chance with the spike.</li>
     </ul>
+    <div class="shots"><figure><img src="img/shots/spike.jpg" alt="The Pontianak spike, on a table in the east house" loading="lazy"><figcaption>The Pontianak spike, on a table in the east house</figcaption></figure></div>
   </div>
   <div class="card">
-    <h3>Toyol → ear</h3>
+    <h3>Toyol → <img class="ico" src="img/items/toyolear.png" alt="" loading="lazy"> ear</h3>
     <span class="tag">Signs: giggling, little footsteps, food going missing</span>
     <ul>
-      <li>Salt the doorways, put all food away, and find the <b>child's toy</b>.</li>
+      <li>Salt the doorways, put all food away, and find the <img class="ico" src="img/items/childstoy.png" alt="" loading="lazy"><b>child's toy</b>.</li>
       <li>Leave the toy out by the door. When the toyol sits down to play with it, <b>hit it</b>. Off the toy it's too quick to hit.</li>
     </ul>
   </div>
   <div class="card">
-    <h3>Pocong → shroud</h3>
+    <h3>Pocong → <img class="ico" src="img/items/pocongshroud.png" alt="" loading="lazy"> shroud</h3>
     <span class="tag">Signs: heavy knocking, a hopping shape in white</span>
     <ul>
       <li>Untie the knot on the fresh grave (<kbd>E</kbd>), and drop every shroud strip back onto the grave (<kbd>G</kbd>).</li>
@@ -350,7 +370,7 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   <ul>
     <li>He can't be attacked on <b>days 3 and 4</b>. On other days, use the shotgun, the machete or the sledgehammer.</li>
     <li><b>Killing him curses the lake: its fish are gone for good.</b> Only the forest pond is left to fish. Do it last.</li>
-    <li>His body holds his confession note, a sledgehammer and his goods, including a <b>car battery</b> if he was carrying one.</li>
+    <li>His body holds his confession note, a sledgehammer and his goods, including a <img class="ico" src="img/items/carbattery.png" alt="" loading="lazy"><b>car battery</b> if he was carrying one.</li>
     <li><b>Hold <kbd>E</kbd></b> on the body to drag it, and haul it out onto the jetty boards. A body left there stays put.</li>
   </ul>
 </section>
@@ -367,7 +387,9 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
 
 <section>
   <h2><span class="n">10</span>The fight</h2>
-  <div class="card"><b>Bring:</b> the shotgun and as many shells as you can carry, the machete, your <b>fishing rod</b>, and medicine or food.</div>
+  <div class="shots"><figure><img src="img/shots/mambang-air.jpg" alt="The Mambang Air ashore, in the blood rain" loading="lazy"><figcaption>The Mambang Air ashore, in the blood rain</figcaption></figure></div>
+
+  <div class="card"><b>Bring:</b> the shotgun and as many shells as you can carry, the machete, your <img class="ico" src="img/items/fishingrod.png" alt="" loading="lazy"><b>fishing rod</b>, and medicine or food.</div>
   <h3>Phase 1: on land</h3>
   <p>It wades ashore, claws up close and spits blood from range, and there's no hiding. Keep moving and shoot. About <b>15 shotgun hits</b> drive it back into the lake. Machete cuts count for less.</p>
   <h3>Phase 2: in the water</h3>
@@ -403,6 +425,7 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   b.addEventListener('click',function(){var t=r.getAttribute('data-theme');var dark=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var n=dark?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}});
   function show(id,on){var body=document.getElementById(id),gate=document.getElementById(id==='truth'?'truth-gate':id.replace('-body','-gate'));body.hidden=!on;gate.hidden=on;var btn=gate.querySelector('[data-open]');if(btn)btn.setAttribute('aria-expanded',on);(on?body:gate).scrollIntoView({behavior:'smooth',block:'start'});}
   document.querySelectorAll('.spoil').forEach(function(e){function on(){e.classList.add('shown');e.removeAttribute('role');e.removeAttribute('tabindex');e.removeAttribute('title');e.removeAttribute('aria-label');}e.addEventListener('click',on);e.addEventListener('keydown',function(k){if(k.key==='Enter'||k.key===' '){k.preventDefault();on();}});});
+  document.querySelectorAll('.shots img').forEach(function(i){i.addEventListener('click',function(){window.open(i.src,'_blank');});});
   document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-open'),true);});});
   document.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-close'),false);});});
 })();
